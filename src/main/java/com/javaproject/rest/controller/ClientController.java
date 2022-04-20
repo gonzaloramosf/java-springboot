@@ -1,4 +1,5 @@
 package com.javaproject.rest.controller;
+import com.javaproject.rest.dto.ClientDto;
 import com.javaproject.rest.entity.Client;
 import com.javaproject.rest.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,10 @@ public class ClientController {
     @GetMapping("/getClients")
     public List<Client> getClients() {
         return clientService.getListClients();
+    }
+
+    @GetMapping("/getClientDto/{id}")
+    public ClientDto getClientDto(@PathVariable(value = "id") Long id) {
+        return clientService.getClientDto(id);
     }
 }

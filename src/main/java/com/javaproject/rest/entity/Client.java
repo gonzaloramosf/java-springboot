@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "client")
@@ -22,6 +23,6 @@ public class Client {
     @Column(name = "lastname")
     private String lastName;
 
-    @Column(name = "direction")
-    private String direction;
+    @Column(name = "date")
+    private String date;
 }
